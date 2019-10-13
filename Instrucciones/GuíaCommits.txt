@@ -31,3 +31,8 @@ Commit - Edición de migraciones
         Por esto: $table->string('email', 128)->index();
   -Edición de la migración create_categories_table
   -Usar php artisan migrate:refresh 
+Commit - Edición de migraciones
+  -Edición de la migración create_posts_table
+  -Edición de la migración create_tags_table
+  -Edición de la migración create_post_tag_table
+  -php artisan migrate:refresh

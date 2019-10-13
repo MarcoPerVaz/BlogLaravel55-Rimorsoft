@@ -4,3 +4,14 @@ Commit - Creación del proyecto blogLaravel55
   -Creación de la carpeta Instrucciones
     -Creación del archivo GuíaCommits.txt
   -Edición del archivo readme.md
+Commit - Creación de modelos y migraciones
+  Nota: Se crearon los modelos y sus migraciones para Category, Post y tags
+  Nota:Se creó la migración para guardar la relación entre posts y tags
+  -Creación del modelo Category junto con su migración
+    -php artisan make:model Category -m 
+  -Creación del modelo Post junto con su migración
+    -php artisan make:model Post -m 
+  -Creación del modelo Tag junto con su migración
+    -php artisan make:model Tag -m 
+  -Creación de la migración para la relación muchos a muchos entre posts y tags
+    -php artisan make:migration create_post_tag_table

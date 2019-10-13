@@ -36,3 +36,25 @@ Commit - Edición de migraciones
   -Edición de la migración create_tags_table
   -Edición de la migración create_post_tag_table
   -php artisan migrate:refresh
+Commit - Factory, seeder y faker
+  -Creación y edición del factory CategoryFactory
+    -php artisan make:factory CategoryFactory
+  -Creación y edición del factory PostFactory
+    -php artisan make:factory PostFactory
+  -Creación y edición del factory TagFactory
+    -php artisan make:factory TagFactory
+  -Creación y edición del seeder CategoriesTableSeeder
+    -php artisan make:seeder CategoriesTableSeeder
+  -Creación y edición del seeder PostsTableSeeder
+    -php artisan make:seeder PostsTableSeeder
+  -Creación y edición del seeder TagsTableSeeder
+    -php artisan make:seeder TagsTableSeeder
+  -Creación y edición del seeder UsersTableSeeder
+    -php artisan make:seeder UsersTableSeeder
+  -Se registran los seeders en DatabaseSeeder.php
+  -Usar php artisan migrate:refresh --seed
+  Error: Se agregó el campo body a la migración create_categories_table (debió hacerse en el commit de edición de migraciones)
+  -Edición del modelo Post
+  -Edición del modelo Category
+  -Edición del modelo Tag
+  -Edición del modelo User

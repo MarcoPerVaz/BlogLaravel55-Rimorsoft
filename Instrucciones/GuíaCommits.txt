@@ -1,0 +1,6 @@
+<----------Proyecto Blog con Laravel 5.5---------->
+Commit - Creación del proyecto blogLaravel55
+  -composer create-project --prefer-dist laravel/laravel blogLaravel55 "5.5.*"
+  -Creación de la carpeta Instrucciones
+    -Creación del archivo GuíaCommits.txt
+  -Edición del archivo readme.md

@@ -15,3 +15,19 @@ Commit - Creación de modelos y migraciones
     -php artisan make:model Tag -m 
   -Creación de la migración para la relación muchos a muchos entre posts y tags
     -php artisan make:migration create_post_tag_table
+Commit - Edición de migraciones
+  -Edición del archivo .env
+    DB_DATABASE=blogLaravel55
+    DB_USERNAME=root
+    DB_PASSWORD=
+  Error: Al crear las migraciones con php artisan migrate usando MariaDB se muestra un error en consola(En laragon no sucede)
+    Error: 1071 Specified key was too long; max key length is 767 bytes
+    Solución: 
+      -Edición de la migración create_users_table
+        Cambiar esto: $table->string('email')->unique();
+        Por esto: $table->string('email', 128)->unique();
+      -Edición de la migración create_password_resets_table
+        Cambiar esto: $table->string('email')->index();
+        Por esto: $table->string('email', 128)->index();
+  -Edición de la migración create_categories_table
+  -Usar php artisan migrate:refresh 

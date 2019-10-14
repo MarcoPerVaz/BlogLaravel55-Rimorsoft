@@ -76,3 +76,11 @@ Commit - Detalle de un post
   -Edición del controlador Web/PageController
     -Creación de la función post()
   -Creación y edición de la vista web/post.blade.php
+Commit - Búsqueda por categoría y etiquetas
+  -Edición del archivo web.php
+    -Creación de la ruta /category/{slug}
+    -Creación de la ruta /tag/{slug}
+  -Edición de la vista web/post.blade.php
+  -Edición del controlador Web/PageController
+    -Creación de la función category()
+    -Creación de la función tag()

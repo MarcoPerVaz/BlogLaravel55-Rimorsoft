@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 // Importado
 use App\Post;
+use App\category;
 
 class PageController extends Controller
 {
@@ -30,6 +31,36 @@ class PageController extends Controller
         $post = Post::where( 'slug', $slug )->first();
 
         return view( 'web.post', compact( 'post' ) );
+
+    }
+
+    /**
+     * Filtrar por categoría
+     */
+    public function category( $slug )
+    {
+
+        $category = Category::where( 'slug', $slug )->pluck( 'id' )->first(); 
+
+        $posts = Post::where( 'category_id', $category )->orderBy( 'id', 'DESC' )->where( 'status', 'PUBLISHED' )->paginate( 3 );
+
+        return view( 'web.posts', compact( 'posts' ) );
+
+    }
+
+    /**
+     * Filtrar por etiquetas
+     */
+    public function tag( $slug )
+    {
+
+        $posts = Post::whereHas( 'tags', function( $query ) use( $slug ) {
+
+            $query->where( 'slug', $slug );
+
+        } )->orderBy( 'id', 'DESC' )->where( 'status', 'PUBLISHED' )->paginate( 3 );
+
+        return view( 'web.posts', compact( 'posts' ) );
 
     }
 

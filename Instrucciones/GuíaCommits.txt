@@ -69,3 +69,10 @@ Commit - Listado de posts, Auth
     -Creación y edición de la función blog()
       Nota: Importar el modelo Post
   -Creación y edición de la vista web/posts.blade.php
+Commit - Detalle de un post
+  -Edición de la vista web/posts.blade.php
+  -Edición del archivo web.php
+    -creación de la ruta /blog/{slug}
+  -Edición del controlador Web/PageController
+    -Creación de la función post()
+  -Creación y edición de la vista web/post.blade.php

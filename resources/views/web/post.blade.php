@@ -5,12 +5,12 @@
   <div class="container">
     <div class="col-md-8 col-md-offset-2">
 
-      <h1>Lita de artículos</h1>
+      <h1>{{ $post->name }}</h1>
 
-      @foreach ( $posts as $post )
           <div class="panel panel-default">
             <div class="panel-heading">
-              {{ $post->name }}
+             Categoría
+             <a href="#">{{ $post->category->name }}</a>
             </div>
 
             <div class="panel-body">
@@ -18,12 +18,15 @@
                   <img src="{{ $post->file }}" class="img-responsive">
               @endif
               {{ $post->excerpt }}
-              <a href="{{ route( 'post', $post->slug ) }}" class="pull-right">Leer más</a>
+              <hr>
+              {!! $post->body !!}
+              <hr>
+              Etiquetas
+              @foreach ($post->tags as $tag)
+                  <a href="#">{{ $tag->name }}</a>
+              @endforeach
             </div>
           </div>
-      @endforeach
-
-      {{ $posts->render() }}
       
     </div>
   </div>

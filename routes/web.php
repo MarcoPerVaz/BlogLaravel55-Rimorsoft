@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::redirect( '/', 'blog' ); /* Reedirección a la ruta blog */
+
+Auth::routes();
+
+Route::get('/blog', 'Web\PageController@blog')->name('blog');

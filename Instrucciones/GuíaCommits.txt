@@ -58,3 +58,14 @@ Commit - Factory, seeder y faker
   -Edición del modelo Category
   -Edición del modelo Tag
   -Edición del modelo User
+Commit - Listado de posts, Auth
+  -Instalar el scafolding necesario para Auth
+    -php artisan make:auth
+  -Edición del archivo web.php
+    -Edición de la ruta /
+    -Creación de la ruta /blog
+  -Creación y edición del controlador Web/PageController
+    -php artisan make:controller Web/PageController
+    -Creación y edición de la función blog()
+      Nota: Importar el modelo Post
+  -Creación y edición de la vista web/posts.blade.php

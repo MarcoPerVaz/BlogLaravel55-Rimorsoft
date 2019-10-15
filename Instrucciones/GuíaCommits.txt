@@ -104,3 +104,11 @@ Commit - Estructura panel administrativo
       -Creación de la carpeta partials
         -Creación del partial form.blade.php
       -Creación de las vistas create.blade.php, edit.blade.php, index.blade.php y show.blade.php
+Commit - Edición de TagController
+  Nota: Uso del middleware Auth
+  -Edición del controlador TagController
+    -Creación y edición del constructor __construct()
+      -Uso del middleware Auth
+    -Edición de las 7 funciones REST (index, create, store, show, edit, update, delete)
+  Error: Se le cambió el nombre a la carpeta views/admin/tag por views/admin/tags
+    -Al cambiar el nombre, git entendió que se eliminaron los archivos y se volvieron a crear

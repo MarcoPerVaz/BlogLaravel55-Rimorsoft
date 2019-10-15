@@ -84,3 +84,23 @@ Commit - Búsqueda por categoría y etiquetas
   -Edición del controlador Web/PageController
     -Creación de la función category()
     -Creación de la función tag()
+<----------Modulo Administrativo---------->
+Commit - Estructura panel administrativo
+  -Edición del controlador Auth/LoginController
+  -Edición del controlador Auth/RegisterController
+  -Edición del controlador Auth/ResetPasswordController
+  -Edición de la vista layouts/app.blade.php
+  -Edición del archivo web.php
+  -Edición del archivo .env
+    -APP_NAME=CMS
+  -Creación del controlador Admin/TagController con las 7 funciones REST
+    -php artisan make:controller Admin/TagController --resource
+  -Creación del controlador Admin/CategoryController con las 7 funciones REST
+    -php artisan make:controller Admin/CategoryController --resource
+  -Creación del controlador Admin/PostController con las 7 funciones REST
+    -php artisan make:controller Admin/PostController --resource
+  -Creación de la carpeta admin en resources/views
+    -Creación de la carpeta tag dentro
+      -Creación de la carpeta partials
+        -Creación del partial form.blade.php
+      -Creación de las vistas create.blade.php, edit.blade.php, index.blade.php y show.blade.php

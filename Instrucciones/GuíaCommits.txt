@@ -123,4 +123,5 @@ Commit - Validación usando requests para tags
       -use App\Http\Requests\TagUpdateRequest;
     -Edición de la función store()
     -Edición de la función update()
-
+Commit - Vista index para tags
+  -Edición de la vista admin/tags/index.blade.php

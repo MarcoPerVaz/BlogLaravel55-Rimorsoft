@@ -125,3 +125,14 @@ Commit - Validación usando requests para tags
     -Edición de la función update()
 Commit - Vista index para tags
   -Edición de la vista admin/tags/index.blade.php
+Commit - Eliminar tags
+  -Implementación de laravel collective
+    Nota: https://laravelcollective.com/docs/5.5/html
+    -composer require "laravelcollective/html":"^5.5.1"
+    -Edición del archivo config/app.php
+      -Se agregó el provider
+        -Collective\Html\HtmlServiceProvider::class,
+      -Se agregaron los alias
+        -'Form' => Collective\Html\FormFacade::class,
+        -'Html' => Collective\Html\HtmlFacade::class,
+  -Edición de la vista admin/tags/index.blade.php

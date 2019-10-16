@@ -136,3 +136,8 @@ Commit - Eliminar tags
         -'Form' => Collective\Html\FormFacade::class,
         -'Html' => Collective\Html\HtmlFacade::class,
   -Edición de la vista admin/tags/index.blade.php
+Commit - Edición de vistas create, edit y show
+  -Edición de la vista layouts/app.blade.php
+  -Edición de la vista admin/create.blade.php
+  -Edición de la vista admin/edit.blade.php
+  -Edición de la vista admin/partials/form.blade.php

@@ -112,3 +112,15 @@ Commit - Edición de TagController
     -Edición de las 7 funciones REST (index, create, store, show, edit, update, delete)
   Error: Se le cambió el nombre a la carpeta views/admin/tag por views/admin/tags
     -Al cambiar el nombre, git entendió que se eliminaron los archivos y se volvieron a crear
+Commit - Validación usando requests para tags
+  -Creación y edición del form request para validación de la función store()
+    -php artisan make:request TagStoreRequest
+  -Creación y edición del form request para validación de la función store()
+    -php artisan make:request TagUpdateRequest
+  -Edición del controlador TagController
+    Nota: Importar los requests
+      -use App\Http\Requests\TagStoreRequest;
+      -use App\Http\Requests\TagUpdateRequest;
+    -Edición de la función store()
+    -Edición de la función update()
+

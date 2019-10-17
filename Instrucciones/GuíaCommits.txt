@@ -141,3 +141,20 @@ Commit - Edición de vistas create, edit y show
   -Edición de la vista admin/create.blade.php
   -Edición de la vista admin/edit.blade.php
   -Edición de la vista admin/partials/form.blade.php
+Commit - stringToSlug y form para crear y actualizar
+  Nota: Uso de la librería stringToSlug para convertir una variable a slug
+  Nota: Creación del form para crear y actualizar una etiqueta
+  -Descargar la librería stringToSlug desde:
+    -http://leocaseiro.com.br/jquery-plugin-string-to-slug/
+    -Se copia el archivo
+      -jquery.stringToSlug.min.js
+    -Se pega en public/vendor/stringToSlug/ dentro del proyecto blogLaravel55
+  -Edición de la vista layouts/app.blade.php
+  -Edición de la vista admin/tags/partials/form.blade.php
+  Error: Edición del form request TagStoreRequest
+    -Esto: 'slug' => 'required|unique:tags, slug',
+    -Por esto: 'slug' => 'required|unique:tags,slug',  
+  Error: Edición del form request TagUpdateRequest
+    -Esto: 'slug' => 'required|unique:tags, slug,' . $this->tag, 
+    -Por esto: 'slug' => 'required|unique:tags,slug,' . $this->tag,   
+    

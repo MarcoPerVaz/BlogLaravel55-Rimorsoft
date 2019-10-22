@@ -164,5 +164,12 @@ Commit - Modulo para categorías
     -php artisan make:request CategoryUpdateRequest
   -Creación  edición de las vistas para categorías
   -Edición del controlador CategoryController
+Commit - Modulo para entradas (posts)
+  -Edición del controlador PostController
+  -Creación  edición de las vistas para posts (index, create, edit, show y partials/form)
+  -Creación y edición del form request para validación de la función store()
+    -php artisan make:request PostStoreRequest
+  -Creación y edición del form request para validación de la función update()
+    -php artisan make:request PostUpdateRequest
   
     

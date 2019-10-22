@@ -4,9 +4,25 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+// Importado
+use App\Post;
+use App\Http\Requests\PostStoreRequest;
+use App\Http\Requests\PostUpdateRequest;
 
 class PostController extends Controller
 {
+
+    /**
+     * Constructor para autorizar que solo los usuarios logueados podrán acceder a los 7 métodos REST 
+     * Nota:Usar only o except si se requiere filtrar que métodos tendrás acceso (only = solo, except = excepto)
+     */
+    public function __construct()
+    {
+
+        $this->middleware( 'auth' );
+
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +30,11 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+
+        $posts = Post::orderBy('id', 'DESC')->paginate(); /* Retorna 15 registros */
+
+        return view( 'admin.posts.index', compact( 'posts' ) );
+
     }
 
     /**
@@ -24,7 +44,9 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        
+        return view( 'admin.posts.create' );
+
     }
 
     /**
@@ -33,9 +55,13 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PostStoreRequest $request)
     {
-        //
+
+        $post = Post::create( $request->all() );
+
+        return redirect()->route( 'posts.edit', $post->id )->with( 'info', 'Entrada creada con éxito' );
+
     }
 
     /**
@@ -46,7 +72,11 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        
+        $post = Post::find( $id );
+
+        return view( 'admin.posts.show', compact( 'post' ) );
+
     }
 
     /**
@@ -57,7 +87,11 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        
+        $post = Post::find( $id );
+
+        return view( 'admin.posts.edit', compact( 'post' ) );
+
     }
 
     /**
@@ -67,9 +101,15 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PostUpdateRequest $request, $id)
     {
-        //
+
+        $post = Post::find( $id );
+
+        $post->fill( $request->all() )->save();
+
+        return redirect()->route( 'posts.edit', $post->id )->with( 'info', 'Entrada actualizada con éxito' );
+
     }
 
     /**
@@ -80,6 +120,10 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
+        $post = Post::find( $id )->delete();
+
+        return back()->with( 'info', 'Eliminado correctamente' );
+        
     }
 }

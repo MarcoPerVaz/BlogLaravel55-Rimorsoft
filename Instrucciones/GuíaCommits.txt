@@ -115,7 +115,7 @@ Commit - Edición de TagController
 Commit - Validación usando requests para tags
   -Creación y edición del form request para validación de la función store()
     -php artisan make:request TagStoreRequest
-  -Creación y edición del form request para validación de la función store()
+  -Creación y edición del form request para validación de la función update()
     -php artisan make:request TagUpdateRequest
   -Edición del controlador TagController
     Nota: Importar los requests
@@ -157,4 +157,12 @@ Commit - stringToSlug y form para crear y actualizar
   Error: Edición del form request TagUpdateRequest
     -Esto: 'slug' => 'required|unique:tags, slug,' . $this->tag, 
     -Por esto: 'slug' => 'required|unique:tags,slug,' . $this->tag,   
+Commit - Modulo para categorías
+  -Creación y edición del form request para validación de la función store()
+    -php artisan make:request CategoryStoreRequest
+  -Creación y edición del form request para validación de la función update()
+    -php artisan make:request CategoryUpdateRequest
+  -Creación  edición de las vistas para categorías
+  -Edición del controlador CategoryController
+  
     

@@ -171,5 +171,9 @@ Commit - Modulo para entradas (posts)
     -php artisan make:request PostStoreRequest
   -Creación y edición del form request para validación de la función update()
     -php artisan make:request PostUpdateRequest
+Commit - Modulo para entrada (post)
+  -Edición del controlador PostController
+    -Edición de la función index(), create() y edit()
+  -Edición de la vista parcial admin/posts/partials/form.blade.php
   
     

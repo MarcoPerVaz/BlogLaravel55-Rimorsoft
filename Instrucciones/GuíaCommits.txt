@@ -185,5 +185,8 @@ Commit - Implementación de CkEditor
     Nota: Versión 4 en su formato Estándar
   -Copiar o cortar la carpeta ckeditor del archivo descargado y pegarla en public/vendor/ del proyecto blogLaravel55
   -Edición de la vista parcial admimn/posts/partials/form.blade.php
+Commit - Validaciones para crear entradas(posts)
+  -Edición del form request PostStoreRequest
+  -Edición del form request PostUpdateRequest
   
     

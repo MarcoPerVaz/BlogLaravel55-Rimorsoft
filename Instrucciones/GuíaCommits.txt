@@ -178,5 +178,12 @@ Commit - Modulo para entrada (post)
 Commit - Listado de etiquetas
   Nota: Listado de etiquetas para crear o actualizar entradas(posts)
   -Edición de la vista parcial admin/posts/partials/form.blade.php
+Commit - Implementación de CkEditor
+  Nota: Editor de texto enriquecido
+  -Descargar la librería cKEditor desde el sitio:
+    -https://ckeditor.com/ckeditor-4/download/
+    Nota: Versión 4 en su formato Estándar
+  -Copiar o cortar la carpeta ckeditor del archivo descargado y pegarla en public/vendor/ del proyecto blogLaravel55
+  -Edición de la vista parcial admimn/posts/partials/form.blade.php
   
     

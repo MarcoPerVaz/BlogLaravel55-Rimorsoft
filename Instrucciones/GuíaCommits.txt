@@ -175,5 +175,8 @@ Commit - Modulo para entrada (post)
   -Edición del controlador PostController
     -Edición de la función index(), create() y edit()
   -Edición de la vista parcial admin/posts/partials/form.blade.php
+Commit - Listado de etiquetas
+  Nota: Listado de etiquetas para crear o actualizar entradas(posts)
+  -Edición de la vista parcial admin/posts/partials/form.blade.php
   
     

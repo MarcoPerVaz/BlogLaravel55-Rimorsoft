@@ -188,5 +188,14 @@ Commit - Implementación de CkEditor
 Commit - Validaciones para crear entradas(posts)
   -Edición del form request PostStoreRequest
   -Edición del form request PostUpdateRequest
+Commit - Subir imágenes y guardar etiquetas
+  -Edición de la vista admin/posts/create.blade.php
+  -Edición de la vista admin/posts/edit.blade.php
+  -Edición del archivo config/filesystems.php
+  -Edición del controlador Admin/PostController
+    Nota: Importar la clase Storage
+      -use Illuminate\Support\Facades\Storage;
+    -Edición de la función store()
+    -Edición de la función update()
   
     

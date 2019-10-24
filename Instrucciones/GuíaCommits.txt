@@ -213,5 +213,9 @@ Commit - Políticas de acceso para entradas(posts)
     -Edición de la función edit()
     -Edición de la función update()
     -Edición de la función delete()
-  
+Commit - Personalizar errores 404 y 403
+  Nota: Personalizar las vistas para los errores 403 y 404
+  -Creación de la carpeta errors
+    -Creación y edición de la vista 403.blade.php
+    -Creación y edición de la vista 404.blade.php
     

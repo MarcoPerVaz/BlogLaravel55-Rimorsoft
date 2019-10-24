@@ -197,5 +197,21 @@ Commit - Subir imágenes y guardar etiquetas
       -use Illuminate\Support\Facades\Storage;
     -Edición de la función store()
     -Edición de la función update()
+Commit - Políticas de acceso para entradas(posts)
+  -Creación y edición de la política PostPolicy
+    -php artisan make:policy PostPolicy
+    Nota:Importar el modelo Post
+      -use App\Post;
+    -Creación de la función pass()
+  -Edición del provider app/Providers/AuthServiceProvider.php
+    Nota: Importar el modelo y la política
+      -use App\Post;
+      -use App\Policies\PostPolicy;
+    -Edición la propiedad $policies
+  -Edición del controlador Admin/PostController
+    -Edición de la función show()
+    -Edición de la función edit()
+    -Edición de la función update()
+    -Edición de la función delete()
   
     
